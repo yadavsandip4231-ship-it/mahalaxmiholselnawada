@@ -1,1 +1,117 @@
-ijhhddd=--;x.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Big Sale Offer</title>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f2f2f2;
+}
+
+header {
+  background: red;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  background: url('https://via.placeholder.com/800x200') center/cover;
+}
+
+.container {
+  padding: 10px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.price {
+  color: green;
+  font-size: 18px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  background: green;
+  color: white;
+  font-size: 16px;
+}
+
+.order-btn {
+  background: red;
+}
+
+#cart {
+  background: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>🔥 Big Sale Offer 🔥</header>
+
+<div class="banner"></div>
+
+<div class="container">
+
+  <div class="card">
+    <h3>Product 1</h3>
+    <p class="price">₹199</p>
+    <button onclick="addToCart('Product 1')">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <h3>Product 2</h3>
+    <p class="price">₹299</p>
+    <button onclick="addToCart('Product 2')">Add to Cart</button>
+  </div>
+
+  <div id="cart">
+    <h3>🛒 Cart:</h3>
+    <ul id="cart-items"></ul>
+  </div>
+
+  <button class="order-btn" onclick="callNow()">📞 Order Now</button>
+
+</div>
+
+<script>
+let cart = [];
+
+function addToCart(product) {
+  cart.push(product);
+  let list = document.getElementById("cart-items");
+  let item = document.createElement("li");
+  item.innerText = product;
+  list.appendChild(item);
+}
+
+function callNow() {
+  window.location.href = "tel:9876543210"; // 👈 अपना नंबर डालो
+}
+</script>
+
+</body>
+</html>
